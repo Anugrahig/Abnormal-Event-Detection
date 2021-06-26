@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./dropzone.min.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+    <h1 class="text-center">Abnormal Event Dectetion</h1>
+    <form class="p-3 text-center" action="/", method="post" enctype="multipart/form-data">
+        <input class="form-control" type="file" name="imagefile">
+        <input class="btn btn-primary mt-3" type="submit" value="Predict Video">
+
+
+    </form>
+
+    
+    <!-- <div class="row">
+        <div class="col-sm-4">
+            <div class="row">
+                <div class="col-12 mx-auto">
+                    <form action="/" class="dropzone" id="dropzone">
+                        <div class="dz-message needsclick">
+                            <img src="upload.png" width="50vw" height="50vw" ><br>
+                            <span class="note needsclick" name="imagefile">Drop files here or click to upload</span>
+                        </div>
+                    </form>
+                </div>
+            </div> -->
+            <!-- <div class="row mt-3">
+                <div class="col-3 mx-auto">
+                    <button id="submitBtn" type="button" class="btn btn-success">Classify</button>
+                </div>
+            </div>
+        </div> -->
+
+
+    {% if data==1 %}
+    <p class="text-center" font-size:large>Abnormal Event</p>
+    {% elif data==0 %}
+    <p class="text-center" font-size:large>Normal Event</p>
+    {% else %}
+    <p class="text-center"></p>
+
+    {% endif %}
+    
+</body>
+<script src="./dropzone.min.js"></script>
+<script src="./app.js"></script>
+</html>
